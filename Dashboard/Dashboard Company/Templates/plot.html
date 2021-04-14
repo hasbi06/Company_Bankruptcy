@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+    <title>Data Visualization</title>
+
+</head>
+<body style="background-image: url({{url_for('static',filename='ee.jpg') }})">
+
+    <!-- HEADING -->
+    <center><br>
+        <img src="../static/gedung lagi.png" width="8%" ><br><br>
+        <h2 class="display-4"><strong>Data Visualization Insight</strong></h2>
+        <br>
+    </center>
+
+    <!-- Chance of Admit -->
+    <div class="container-fluid">
+        <h2 class="display-4"><strong>1. Komparasi Data</strong></h2>
+        <center><img src="../static/Perbandingan Data.png" width="600" height="600"><br><br></center>
+        <p>
+            <h2><strong>Deskripsi :</strong><br></h2>
+            <p>Perbandingan perusahaan yang survive dan pailit pada dataset memiliki perbedaan yang sangat besar (imbalance)<br></p>
+            
+        </p>
+    </div>
+    <div class="container-fluid">
+        <h2 class="display-4"><strong>2. Heatmap dataset</strong></h2>
+        <center><img src="../static/HeatMapSpearmanLast.png" width="1000" height="1000"><br><br></center>
+        <p>
+            <h2><strong>Deskripsi :</strong><br></h2>
+            <p>Heatmap digunakan untuk mencari korelasi antar feature, metode yang digunakan adalah spearman</p>
+            <p>Pada heatmap diatas kita berfokus kepada feature Bankrupt, dan yang memiliki nilai korelasi (>0.2 dan <-0.2) dengan feature bankrupt adalah :
+            <p> 1. Total debt/Total net worth                              = 0.22
+            <p> 2. Debt ratio %                                            = 0.22
+            <p> 3. Borrowing dependency                                    = 0.22
+            <p> 4. Liability to Equity                                     = 0.2
+            <p> 5. Net Value Growth Rate                                   = -0.2
+            <p> 6. Quick Ratio                                             = -0.2
+            <p> 7. Net Value Per Share (C)                                 = -0.2
+            <p> 8. Net Value Per Share (B)                                 = -0.21
+            <p> 9. Net Value Per Share (A)                                 = -0.21
+            <p> 10. ROA(C) before interest and depreciation before interes = -0.22
+            <p> 11. ROA(A) before interest and % after tax                 = -0.22
+            <p> 12. ROA(B) before interest and depreciation after tax      = -0.22
+            <p> 13. Pre-tax net interest rate                              = -0.22
+            <p> 14. After-tax net Interest Rate                            = -0.22
+            <p> 15. Non-industry income and expenditure/revenue            = -0.22
+            <p> 16. Net worth/Assets                                       = -0.22
+            <p> 17. Equity to Liability                                    = -0.22
+            <p> 18. Continuous interest rate (after tax)                   = -0.23
+            <p> 19. Per Share Net profit before tax (Yuan ¥)               = -0.23
+            <p> 20. Net profit before tax/Paid-in capital                  = -0.23
+            <p> 21. Persistent EPS in the Last Four Seasons                = -0.24
+            
+   
+    </div>
+    
+
+
+    <center>
+        <form action = "http://127.0.0.1:5000">
+        <button style="height:45px;width:150px;font-size: 20px;text-align: center;line-height: 20px; background-color: #f50101;color: cornsilk;  type="button" class="btn btn-info"">Back</button>
+        </form><br><br>
+    </center>
+    
+    <!--JavaScript at end of body for optimized loading-->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>
